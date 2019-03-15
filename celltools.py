@@ -47,6 +47,9 @@ def count_reads(bamFileName,chrom,pos,ref,alt):
         if read.has_tag('CB'):
             cellTag = read.get_tag('CB')
         
+        if cellTag == 'NoTag':
+            continue
+        
         if cellTag in counts[allele_i]:
             counts[allele_i][cellTag] += 1
         else:

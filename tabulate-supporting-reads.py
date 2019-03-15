@@ -77,16 +77,23 @@ for line in inFile:
     
     k = counts[0].keys()
     k.sort()
+    if len(k) == 0:
+        k = ['.']
+
     k = ':'.join(k)
     nl.append(k)
 
     k = counts[1].keys()
     k.sort()
+    if len(k) == 0:
+        k = ['.']
     k = ':'.join(k)
     nl.append(k)
 
     k = counts[2].keys()
     k.sort()
+    if len(k) == 0:
+        k = ['.']
     k = ':'.join(k)
     nl.append(k)
     
